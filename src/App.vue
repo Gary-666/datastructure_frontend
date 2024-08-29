@@ -15,8 +15,8 @@ import ChatWindow from '@/components/ChatWindow'
 export default {
   name: 'App',
   components: {
-    BackToTop,
-    ChatWindow
+    BackToTop
+    // ChatWindow
   }
 }
 </script>

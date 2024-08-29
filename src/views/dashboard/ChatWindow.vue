@@ -54,7 +54,7 @@ Vue.prototype.$axios = axios
 export default {
   data () {
     return {
-      userid: null, // 用于存储用户ID
+      userid: 999, // 用于存储用户ID
       userInput: '',
       messages: [],
       isMinimized: false,
@@ -136,7 +136,6 @@ export default {
         // const data = await response;
         // const botResponse = data.choices[0].message.content // 后端返回的是JSON字符串，需要提取consent
         const botResponse = data // 当后端返回的为content
-        // Append the bot's response to the messages array 'http://localhost:8003/api/llm-response'
         this.messages.push({ id: Date.now(), text: botResponse, type: 'bot-message' })
         // this.messages.push({ id: Date.now(), text: data, type: 'bot-message' });
       } catch (error) {
